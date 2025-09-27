@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Event Participation Selector</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav>
+  <div class="hamburger" id="hamburger" aria-label="Open menu" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+  <div class="query-icon" id="queryIcon" aria-label="Show query help" role="button" tabindex="0">?</div>
+  <div class="query-popup" id="queryPopup" role="tooltip">
+    Click categories to select events. Use the search panel for API queries.
+  </div>
+</nav>
+
+<div class="slide-panel" id="slidePanel" aria-hidden="true" role="dialog" aria-label="Search and menu panel">
+  <button class="close-btn" id="closeBtn" aria-label="Close menu">&times;</button>
+  <div class="search-container">
+    <input type="text" class="search-input" id="apiSearchInput" placeholder="Search API query..." aria-label="API Search input" />
+    <button class="search-btn" id="searchButton" aria-label="Execute search">Go</button>
+  </div>
+</div>
+
+<div id="mainContent">
+  <div id="categories" aria-label="Event main categories">
+    <!-- Populated by JS -->
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
